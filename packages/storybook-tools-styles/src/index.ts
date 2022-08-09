@@ -1,1 +1,1 @@
-export * from './lib/storybook-tools-styles';
+export * from './lib/getClasses';
