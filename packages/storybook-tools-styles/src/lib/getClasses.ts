@@ -6,7 +6,7 @@ import { CSSModule, StyleProps, StyleObject } from './types';
 
 export const getClasses =
   (cssModule: CSSModule) =>
-  (props: StyleProps) =>
+  (props: StyleProps | Record<string, any>) =>
   (...args: (string | string[] | StyleObject)[]) => {
     return classNames(
       args.map((arg) => {

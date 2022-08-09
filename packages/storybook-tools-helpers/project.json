@@ -2,34 +2,35 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "packages/storybook-tools-helpers/src",
   "projectType": "library",
+  "tags": [],
   "targets": {
     "build": {
-      "executor": "@nrwl/js:tsc",
+      "executor": "@nrwl/web:rollup",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/packages/storybook-tools-helpers",
-        "main": "packages/storybook-tools-helpers/src/index.ts",
         "tsConfig": "packages/storybook-tools-helpers/tsconfig.lib.json",
-        "assets": ["packages/storybook-tools-helpers/*.md"]
+        "project": "packages/storybook-tools-helpers/package.json",
+        "entryFile": "packages/storybook-tools-helpers/src/index.ts",
+        "external": ["react/jsx-runtime"],
+        "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+        "compiler": "babel",
+        "assets": [
+          {
+            "glob": "packages/storybook-tools-helpers/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ]
       }
-    },
-    "publish": {
-      "executor": "@nrwl/workspace:run-commands",
-      "options": {
-        "command": "node tools/scripts/publish.mjs storybook-tools-helpers {args.ver} {args.tag}"
-      },
-      "dependsOn": [
-        {
-          "projects": "self",
-          "target": "build"
-        }
-      ]
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["packages/storybook-tools-helpers/**/*.ts"]
+        "lintFilePatterns": [
+          "packages/storybook-tools-helpers/**/*.{ts,tsx,js,jsx}"
+        ]
       }
     },
     "test": {
@@ -40,6 +41,5 @@
         "passWithNoTests": true
       }
     }
-  },
-  "tags": []
+  }
 }
