@@ -14,7 +14,20 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@glrodasz/storybook-tools-helpers": [
+        "packages/storybook-tools-helpers/src/index.ts"
+      ],
+      "@glrodasz/storybook-tools-snapshots": [
+        "packages/storybook-tools-snapshots/src/index.ts"
+      ],
+      "@glrodasz/storybook-tools-styles": [
+        "packages/storybook-tools-styles/src/index.ts"
+      ],
+      "@glrodasz/storybook-tools-webpack": [
+        "packages/storybook-tools-webpack/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
