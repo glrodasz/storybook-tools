@@ -1,16 +1,6 @@
 import * as React from 'react';
-import {
-  getClasses,
-  CSSModule,
-  StyleObject,
-} from '@glrodasz/storybook-tools-styles';
-
-type ComponentProps = {
-  getStyles?: () => string | StyleObject;
-  children?: JSX.Element[];
-} & Record<string, any>;
-
-export type StoryComponent = React.FC<ComponentProps>;
+import { getClasses, CSSModule } from '@glrodasz/storybook-tools-styles';
+import type { StoryComponent } from './types';
 
 export const getTemplate =
   (Component: StoryComponent, styles: CSSModule) =>

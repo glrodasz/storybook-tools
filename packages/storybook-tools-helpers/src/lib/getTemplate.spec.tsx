@@ -1,4 +1,5 @@
-import { getTemplate, StoryComponent } from './getTemplate';
+import { getTemplate } from './getTemplate';
+import type { StoryComponent } from './types';
 
 type CommonObject = Record<string, any>;
 
