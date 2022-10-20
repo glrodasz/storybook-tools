@@ -1,4 +1,5 @@
-import { getTemplate, StoryComponent } from './storybook-tools-helpers';
+import { getTemplate } from './getTemplate';
+import type { StoryComponent } from './types';
 
 type CommonObject = Record<string, any>;
 
