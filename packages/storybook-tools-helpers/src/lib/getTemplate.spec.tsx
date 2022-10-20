@@ -1,10 +1,8 @@
 import { getTemplate } from './getTemplate';
 import type { StoryComponent } from './types';
 
-type CommonObject = Record<string, any>;
-
 jest.mock('@glrodasz/storybook-tools-styles', () => ({
-  getClasses: (a: CommonObject) => (b: CommonObject) => ({ ...a, ...b }),
+  getClasses: (a: any) => (b: any) => ({ ...a, ...b }),
 }));
 
 describe('[ helpers / storybook ]', () => {
