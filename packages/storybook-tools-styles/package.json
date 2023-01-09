@@ -1,5 +1,7 @@
 {
   "name": "@glrodasz/storybook-tools-styles",
   "version": "0.0.1",
-  "type": "commonjs"
+  "dependencies": {
+    "classnames": "^2.3.2"
+  }
 }
