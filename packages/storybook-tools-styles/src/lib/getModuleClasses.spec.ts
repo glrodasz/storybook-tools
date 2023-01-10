@@ -1,5 +1,5 @@
-import { getModuleClasses } from "./getModuleClasses";
-import { cssModuleMock } from "./mocks";
+import { getModuleClasses } from "./getModuleClasses.js";
+import { cssModuleMock } from "./mocks.js";
 
 describe('#getModuleClasses', () => {
   describe('when `cssModule` contains the `classKey`', () => {

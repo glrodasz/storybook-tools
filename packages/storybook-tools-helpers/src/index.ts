@@ -1,3 +1,3 @@
-export * from './lib/getListTemplate';
-export * from './lib/getOptionsArgTypes';
-export * from './lib/getTemplate';
+export { getListTemplate } from './lib/getListTemplate.js';
+export { getOptionsArgTypes } from './lib/getOptionsArgTypes.js';
+export { getTemplate } from './lib/getTemplate.js';

@@ -1,10 +1,10 @@
-import * as React from 'react';
+import * as React from 'react'  ;
 import { getClasses, CSSModule } from '@glrodasz/storybook-tools-styles';
-import type { StoryComponent, Args } from './types';
+import type { StoryComponent, Args } from './types.js';
 
 export const getListTemplate =
   (Component: StoryComponent, styles: CSSModule) =>
-  ({ items, ...args }: { items: Args; args: Args }) =>
+  ({ items, ...args }: { items: Args; args: Record<string, any> }) =>
     items.map((item, index) => {
       const allProps = { ...Component.defaultProps, ...args, ...item };
       return (

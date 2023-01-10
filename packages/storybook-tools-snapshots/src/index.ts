@@ -1,1 +1,1 @@
-export * from './lib/storybook-tools-snapshots';
+export { createSnapshots } from './lib/createSnapshots.js';

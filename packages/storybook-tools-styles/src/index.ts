@@ -1,2 +1,2 @@
-export * from './lib/getClasses';
-export * from './lib/types';
+export { getClasses } from './lib/getClasses.js';
+export * from './lib/types.js';
