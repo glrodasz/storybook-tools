@@ -1,1 +1,1 @@
-export { createSnapshots } from './lib/createSnapshots';
+export { createSnapshots } from './lib/createSnapshots.js';

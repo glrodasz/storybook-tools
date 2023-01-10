@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { getClasses, CSSModule } from '@glrodasz/storybook-tools-styles';
-import type { StoryComponent } from './types';
+import type { StoryComponent } from './types.js';
 
 export const getTemplate =
   (Component: StoryComponent, styles: CSSModule) =>

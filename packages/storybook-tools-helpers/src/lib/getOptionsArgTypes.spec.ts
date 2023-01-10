@@ -1,4 +1,4 @@
-import { getOptionsArgTypes } from './getOptionsArgTypes';
+import { getOptionsArgTypes } from './getOptionsArgTypes.js';
 
 describe('#getOptionsArgTypes', () => {
   describe('Given some `options`', () => {

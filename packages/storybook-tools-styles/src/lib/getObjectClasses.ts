@@ -1,4 +1,4 @@
-import type { CSSModule, StyleObject, CSSClassName } from "./types";
+import type { CSSModule, StyleObject, CSSClassName } from "./types.js";
 
 export const getObjectClasses = (
   cssModule: CSSModule,

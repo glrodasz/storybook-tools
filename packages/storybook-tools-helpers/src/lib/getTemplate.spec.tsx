@@ -1,5 +1,5 @@
-import { getTemplate } from './getTemplate';
-import type { StoryComponent } from './types';
+import { getTemplate } from './getTemplate.js';
+import type { StoryComponent } from './types.js';
 
 jest.mock('@glrodasz/storybook-tools-styles', () => ({
   getClasses: (a: any) => (b: any) => ({ ...a, ...b }),

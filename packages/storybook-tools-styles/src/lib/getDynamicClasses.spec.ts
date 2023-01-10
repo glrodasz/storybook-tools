@@ -1,5 +1,5 @@
-import { getDynamicClasses } from './getDynamicClasses';
-import { cssModuleMock, propsMock } from './mocks';
+import { getDynamicClasses } from './getDynamicClasses.js';
+import { cssModuleMock, propsMock } from './mocks.js';
 
 describe('#getDynamicClasses', () => {
   describe('when all `props` match the `classes` array', () => {

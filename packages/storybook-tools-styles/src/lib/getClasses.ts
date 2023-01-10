@@ -1,8 +1,8 @@
 import classNames from 'classnames';
-import { getDynamicClasses } from './getDynamicClasses';
-import { getModuleClasses } from './getModuleClasses';
-import { getObjectClasses } from './getObjectClasses';
-import { CSSModule, StyleProps, StyleObject } from './types';
+import { getDynamicClasses } from './getDynamicClasses.js';
+import { getModuleClasses } from './getModuleClasses.js';
+import { getObjectClasses } from './getObjectClasses.js';
+import { CSSModule, StyleProps, StyleObject } from './types.js';
 
 export const getClasses =
   (cssModule: CSSModule) =>

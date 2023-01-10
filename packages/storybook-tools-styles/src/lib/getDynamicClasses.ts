@@ -1,4 +1,4 @@
-import { CSSModule, StyleProps } from './types';
+import { CSSModule, StyleProps } from './types.js';
 
 export const getDynamicClasses = (
   cssModule: CSSModule,

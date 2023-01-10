@@ -1,13 +1,14 @@
 import 'jest-specific-snapshot';
+import * as React from 'react';
 
 import { describe, it, expect } from '@jest/globals';
 
 import { render } from '@testing-library/react';
 import { composeStories } from '@storybook/testing-react';
 
-import { getStoriesModules } from './getStoriesModules';
-import { getSnapshotPath } from './getSnapshotPath';
-import { STORIES_GLOB } from './constants';
+import { getStoriesModules } from './getStoriesModules.js';
+import { getSnapshotPath } from './getSnapshotPath.js';
+import { STORIES_GLOB } from './constants.js';
 
 export const createSnapshots = (storiesGlob = STORIES_GLOB) => {
   const storiesModules = getStoriesModules(storiesGlob);

@@ -1,5 +1,5 @@
-import { getObjectClasses } from "./getObjectClasses";
-import { cssModuleMock } from './mocks';
+import { getObjectClasses } from "./getObjectClasses.js";
+import { cssModuleMock } from './mocks.js';
 
 describe('#getObjectClasses', () => {
   describe('when `cssModule` and `object` is provided', () => {

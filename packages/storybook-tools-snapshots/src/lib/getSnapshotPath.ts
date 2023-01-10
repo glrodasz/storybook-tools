@@ -1,7 +1,7 @@
-import { SNAPSHOTS_FOLDER, SNAPSHOT_EXT} from './constants'
+import { SNAPSHOTS_FOLDER, SNAPSHOT_EXT} from './constants.js'
 
-import { getStoryPaths } from './getStoryPaths'
-import { getComponentNameStoryFilePath } from './getComponentNameStoryFilePath'
+import { getStoryPaths } from './getStoryPaths.js'
+import { getComponentNameStoryFilePath } from './getComponentNameStoryFilePath.js'
 
 export const getSnapshotPath = (filePath: string) : string => {
   const { dirnamePath } = getStoryPaths(filePath)

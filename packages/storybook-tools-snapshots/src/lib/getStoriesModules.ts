@@ -1,6 +1,6 @@
 import * as glob from 'glob'
 
-import { getStoryPaths } from './getStoryPaths'
+import { getStoryPaths } from './getStoryPaths.js'
 
 export const getStoriesModules = (globPath: string): { module: any; filePath: string;}[] | void => {
   try {
