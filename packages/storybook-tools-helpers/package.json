@@ -10,7 +10,7 @@
     "prebuild": "rm -rf dist"
   },
   "dependencies": {
-    "@glrodasz/storybook-tools-styles": "^0.0.2",
+    "@glrodasz/storybook-tools-styles": "^0.0.4",
     "react": "^18.2.0"
   },
   "devDependencies": {
