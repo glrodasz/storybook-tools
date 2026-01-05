@@ -1,4 +1,4 @@
-import { storybookToolsWebpack } from './storybook-tools-webpack';
+import { storybookToolsWebpack } from './storybook-tools-webpack.js';
 
 describe('storybookToolsWebpack', () => {
   it('should work', () => {

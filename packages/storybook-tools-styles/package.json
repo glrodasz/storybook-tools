@@ -10,7 +10,9 @@
   },
   "scripts": {
     "build": "tsup src/index.ts --format esm --dts",
-    "prebuild": "rm -rf dist"
+    "prebuild": "rm -rf dist",
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "dependencies": {
     "classnames": "^2.5.1"
