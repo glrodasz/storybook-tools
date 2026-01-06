@@ -1,8 +1,9 @@
+import { vi } from 'vitest';
 import { getTemplate } from './getTemplate.js';
 import type { StoryComponent } from './types.js';
 
-jest.mock('@glrodasz/storybook-tools-styles', () => ({
-  getClasses: (a: any) => (b: any) => ({ ...a, ...b }),
+vi.mock('@glrodasz/storybook-tools-styles', () => ({
+  getClasses: (a: unknown) => (b: unknown) => ({ ...(a as object), ...(b as object) }),
 }));
 
 describe('#getTemplate', () => {
@@ -20,19 +21,24 @@ describe('#getTemplate', () => {
 
       // then
       expect(result).toMatchInlineSnapshot(`
-        <Component
-          args="args"
-          defaultProps="defaultProps"
-          foo="foo"
-          getStyles={
-            Object {
+        {
+          "$$typeof": Symbol(react.transitional.element),
+          "_owner": null,
+          "_store": {},
+          "key": null,
+          "props": {
+            "args": "args",
+            "defaultProps": "defaultProps",
+            "foo": "foo",
+            "getStyles": {
               "args": "args",
               "defaultProps": "defaultProps",
               "foo": "foo",
               "styles": "styles",
-            }
-          }
-        />
+            },
+          },
+          "type": [Function],
+        }
       `);
     });
   });
