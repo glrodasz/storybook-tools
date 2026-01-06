@@ -9,8 +9,7 @@
   },
   "workspaces": [
     "packages/storybook-tools-styles",
-    "packages/storybook-tools-helpers",
-    "packages/storybook-tools-webpack"
+    "packages/storybook-tools-helpers"
   ],
   "scripts": {
     "build": "turbo run build",
