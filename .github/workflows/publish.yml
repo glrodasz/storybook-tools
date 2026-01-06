@@ -1,4 +1,4 @@
-name: Publish to NPM
+name: Release
 
 on:
   push:
@@ -7,15 +7,20 @@ on:
       - main
 
 jobs:
-  publish:
+  release:
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write
+      issues: write
+      pull-requests: write
       id-token: write
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -36,14 +41,8 @@ jobs:
       - name: Build packages
         run: yarn build
 
-      - name: Publish storybook-tools-styles
-        working-directory: packages/storybook-tools-styles
-        run: npm publish --access public
+      - name: Release
+        run: yarn release
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-      - name: Publish storybook-tools-helpers
-        working-directory: packages/storybook-tools-helpers
-        run: npm publish --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

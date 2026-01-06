@@ -2,6 +2,17 @@
   "name": "@glrodasz/storybook-tools-helpers",
   "version": "0.0.3",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/glrodasz/storybook-tools.git",
+    "directory": "packages/storybook-tools-helpers"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist"
+  ],
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
