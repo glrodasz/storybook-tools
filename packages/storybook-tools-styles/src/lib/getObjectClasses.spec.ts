@@ -1,4 +1,4 @@
-import { getObjectClasses } from "./getObjectClasses.js";
+import { getObjectClasses } from './getObjectClasses.js';
 import { cssModuleMock } from './mocks.js';
 
 describe('#getObjectClasses', () => {

@@ -4,7 +4,7 @@ import type { StoryComponent } from './types.js';
 
 export const getTemplate =
   (Component: StoryComponent, styles: CSSModule) =>
-  (args: Record<string, any>) => {
+  (args: Record<string, unknown>) => {
     const allProps = { ...Component.defaultProps, ...args };
     return <Component {...args} getStyles={getClasses(styles)(allProps)} />;
   };

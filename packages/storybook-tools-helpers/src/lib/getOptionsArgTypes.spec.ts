@@ -11,9 +11,9 @@ describe('#getOptionsArgTypes', () => {
 
       // Assert
       expect(result).toMatchInlineSnapshot(`
-        Object {
-          "control": Object {
-            "options": Array [
+        {
+          "control": {
+            "options": [
               "Michelangelo",
               "Leonardo",
               "Donatello",
@@ -22,8 +22,8 @@ describe('#getOptionsArgTypes', () => {
             "type": "select",
           },
           "description": "**options:**",
-          "table": Object {
-            "type": Object {
+          "table": {
+            "type": {
               "summary": "'Michelangelo'|'Leonardo'|'Donatello'|'Raphael'",
             },
           },

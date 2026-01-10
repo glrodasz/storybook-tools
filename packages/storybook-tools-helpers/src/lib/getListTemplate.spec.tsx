@@ -1,8 +1,12 @@
-import { getListTemplate } from './getListTemplate';
-import type { StoryComponent } from './types';
+import { vi } from 'vitest';
+import { getListTemplate } from './getListTemplate.js';
+import type { StoryComponent } from './types.js';
 
-jest.mock('@glrodasz/storybook-tools-styles', () => ({
-  getClasses: (a: any) => (b: any) => ({ ...a, ...b }),
+vi.mock('@glrodasz/storybook-tools-styles', () => ({
+  getClasses: (a: unknown) => (b: unknown) => ({
+    ...(a as object),
+    ...(b as object),
+  }),
 }));
 
 describe('#getListTemplate', () => {
@@ -21,43 +25,48 @@ describe('#getListTemplate', () => {
 
       // Assert
       expect(result).toMatchInlineSnapshot(`
-        Array [
-          <Component
-            alpha="α"
-            args={
-              Object {
+        [
+          {
+            "$$typeof": Symbol(react.transitional.element),
+            "_owner": null,
+            "_store": {},
+            "key": "0",
+            "props": {
+              "alpha": "α",
+              "args": {
                 "args": "args",
                 "foo": "foo",
-              }
-            }
-            defaultProps="defaultProps"
-            foo="bar"
-            getStyles={
-              Object {
+              },
+              "defaultProps": "defaultProps",
+              "foo": "bar",
+              "getStyles": {
                 "alpha": "α",
-                "args": Object {
+                "args": {
                   "args": "args",
                   "foo": "foo",
                 },
                 "defaultProps": "defaultProps",
                 "foo": "bar",
                 "styles": "styles",
-              }
-            }
-          />,
-          <Component
-            args={
-              Object {
+              },
+            },
+            "type": [Function],
+          },
+          {
+            "$$typeof": Symbol(react.transitional.element),
+            "_owner": null,
+            "_store": {},
+            "key": "1",
+            "props": {
+              "args": {
                 "args": "args",
                 "foo": "foo",
-              }
-            }
-            beta="β"
-            defaultProps="defaultProps"
-            foo="bar"
-            getStyles={
-              Object {
-                "args": Object {
+              },
+              "beta": "β",
+              "defaultProps": "defaultProps",
+              "foo": "bar",
+              "getStyles": {
+                "args": {
                   "args": "args",
                   "foo": "foo",
                 },
@@ -65,22 +74,25 @@ describe('#getListTemplate', () => {
                 "defaultProps": "defaultProps",
                 "foo": "bar",
                 "styles": "styles",
-              }
-            }
-          />,
-          <Component
-            args={
-              Object {
+              },
+            },
+            "type": [Function],
+          },
+          {
+            "$$typeof": Symbol(react.transitional.element),
+            "_owner": null,
+            "_store": {},
+            "key": "2",
+            "props": {
+              "args": {
                 "args": "args",
                 "foo": "foo",
-              }
-            }
-            defaultProps="defaultProps"
-            foo="bar"
-            gamma="γ"
-            getStyles={
-              Object {
-                "args": Object {
+              },
+              "defaultProps": "defaultProps",
+              "foo": "bar",
+              "gamma": "γ",
+              "getStyles": {
+                "args": {
                   "args": "args",
                   "foo": "foo",
                 },
@@ -88,9 +100,10 @@ describe('#getListTemplate', () => {
                 "foo": "bar",
                 "gamma": "γ",
                 "styles": "styles",
-              }
-            }
-          />,
+              },
+            },
+            "type": [Function],
+          },
         ]
       `);
     });

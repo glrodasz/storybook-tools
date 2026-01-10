@@ -6,12 +6,12 @@ import { CSSModule, StyleProps, StyleObject } from './types.js';
 
 export const getClasses =
   (cssModule: CSSModule) =>
-  (props: StyleProps | Record<string, any>) =>
+  (props: StyleProps | Record<string, unknown>) =>
   (...args: (string | string[] | StyleObject)[]) => {
     return classNames(
       args.map((arg) => {
         if (Array.isArray(arg)) {
-          return getDynamicClasses(cssModule, props, arg);
+          return getDynamicClasses(cssModule, props as StyleProps, arg);
         } else if (typeof arg === 'string') {
           return getModuleClasses(cssModule, arg);
         } else if (typeof arg === 'object') {

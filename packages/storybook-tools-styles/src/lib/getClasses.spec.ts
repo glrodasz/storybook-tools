@@ -1,8 +1,9 @@
-import { getClasses } from './getClasses';
-import { cssModuleMock, propsMock } from './mocks';
+import { vi } from 'vitest';
+import { getClasses } from './getClasses.js';
+import { cssModuleMock, propsMock } from './mocks.js';
 
-jest.mock('classnames', () => ({
-  default: (value: any) => value,
+vi.mock('classnames', () => ({
+  default: (value: unknown) => value,
 }));
 
 describe('#getClasses', () => {

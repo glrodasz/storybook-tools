@@ -2,18 +2,34 @@
   "name": "@glrodasz/storybook-tools-styles",
   "version": "0.0.4",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/glrodasz/storybook-tools.git",
+    "directory": "packages/storybook-tools-styles"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist"
+  ],
   "exports": {
-    ".": "./dist/index.js"
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
   },
   "scripts": {
     "build": "tsup src/index.ts --format esm --dts",
-    "prebuild": "rm -rf dist"
+    "prebuild": "rm -rf dist",
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "dependencies": {
-    "classnames": "^2.3.2"
+    "classnames": "^2.5.1"
   },
   "devDependencies": {
-    "tsup": "^6.5.0",
-    "typescript": "^4.9.4"
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2"
   }
 }
