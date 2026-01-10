@@ -1,6 +1,6 @@
 export type CSSClassName = `.${string}` | string;
 
-export type CSSModule = Record<string, CSSClassName>
+export type CSSModule = Record<string, CSSClassName>;
 
 export type StyleProps = Record<string, string>;
 

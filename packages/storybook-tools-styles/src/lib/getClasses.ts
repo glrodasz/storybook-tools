@@ -8,7 +8,7 @@ export const getClasses =
   (cssModule: CSSModule) =>
   (props: StyleProps | Record<string, unknown>) =>
   (...args: (string | string[] | StyleObject)[]) => {
-      return classNames(
+    return classNames(
       args.map((arg) => {
         if (Array.isArray(arg)) {
           return getDynamicClasses(cssModule, props as StyleProps, arg);

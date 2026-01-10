@@ -1,4 +1,4 @@
-import { CSSModule, CSSClassName } from "./types.js";
+import { CSSModule, CSSClassName } from './types.js';
 
 export const getModuleClasses = (
   cssModule: CSSModule | null = {},

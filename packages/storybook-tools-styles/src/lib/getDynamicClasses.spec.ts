@@ -9,7 +9,7 @@ describe('#getDynamicClasses', () => {
       // when
       const result = getDynamicClasses(cssModuleMock, propsMock, args);
       // then
-      const expected = '.xyz_size_sm .xyz_color_red'
+      const expected = '.xyz_size_sm .xyz_color_red';
 
       expect(result).toStrictEqual(expected);
     });
@@ -36,7 +36,7 @@ describe('#getDynamicClasses', () => {
       // when
       const result = getDynamicClasses(cssModuleMock, propsMock, args);
       // then
-      const expected = '.xyz_color_red'
+      const expected = '.xyz_color_red';
 
       expect(result).toStrictEqual(expected);
     });

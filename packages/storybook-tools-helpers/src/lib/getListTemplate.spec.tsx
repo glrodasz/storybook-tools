@@ -3,7 +3,10 @@ import { getListTemplate } from './getListTemplate.js';
 import type { StoryComponent } from './types.js';
 
 vi.mock('@glrodasz/storybook-tools-styles', () => ({
-  getClasses: (a: unknown) => (b: unknown) => ({ ...(a as object), ...(b as object) }),
+  getClasses: (a: unknown) => (b: unknown) => ({
+    ...(a as object),
+    ...(b as object),
+  }),
 }));
 
 describe('#getListTemplate', () => {
