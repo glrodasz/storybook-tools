@@ -1,6 +1,6 @@
 {
   "name": "@glrodasz/storybook-tools-helpers",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "type": "module",
   "repository": {
     "type": "git",
@@ -26,7 +26,7 @@
     "test:watch": "vitest"
   },
   "dependencies": {
-    "@glrodasz/storybook-tools-styles": "^0.0.4"
+    "@glrodasz/storybook-tools-styles": "1.0.0"
   },
   "peerDependencies": {
     "react": "^18.0.0 || ^19.0.0"
