@@ -772,7 +772,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@glrodasz/storybook-tools-helpers@workspace:packages/storybook-tools-helpers"
   dependencies:
-    "@glrodasz/storybook-tools-styles": "npm:^0.0.4"
+    "@glrodasz/storybook-tools-styles": "npm:1.0.0"
     "@types/react": "npm:^19.0.0"
     react: "npm:^19.0.0"
     tsup: "npm:^8.3.5"
@@ -782,7 +782,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@glrodasz/storybook-tools-styles@npm:^0.0.4, @glrodasz/storybook-tools-styles@workspace:packages/storybook-tools-styles":
+"@glrodasz/storybook-tools-styles@npm:1.0.0, @glrodasz/storybook-tools-styles@workspace:packages/storybook-tools-styles":
   version: 0.0.0-use.local
   resolution: "@glrodasz/storybook-tools-styles@workspace:packages/storybook-tools-styles"
   dependencies:
@@ -3652,9 +3652,9 @@ __metadata:
   linkType: hard
 
 "fast-uri@npm:^3.0.1":
-  version: 3.1.0
-  resolution: "fast-uri@npm:3.1.0"
-  checksum: 10c0/44364adca566f70f40d1e9b772c923138d47efeac2ae9732a872baafd77061f26b097ba2f68f0892885ad177becd065520412b8ffeec34b16c99433c5b9e2de7
+  version: 3.1.9
+  resolution: "fast-uri@npm:3.1.9"
+  checksum: 10c0/052757540d8c0bbc16bb124a45b8f5cb5d0932f9b89f019221ee41cdb3cafc1db44b2e809d6b888b87922af3e5560a863124454e9d9193e1fc955887357b5add
   languageName: node
   linkType: hard
 
